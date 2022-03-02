@@ -1,6 +1,6 @@
 import React from "react";
 
-let inputElements = ["Position", "Company", "Duration"];
+let inputElements = ["Position", "Company", "Duration", "From", "To"];
 
 export class JobExperience extends React.Component {
   constructor(props) {
@@ -10,6 +10,8 @@ export class JobExperience extends React.Component {
       Position: "",
       Company: "",
       Duration: "",
+      From: "",
+      To: "",
     };
   }
 
@@ -25,6 +27,8 @@ export class JobExperience extends React.Component {
     this.props.parentCallExp(this.state.Position);
     this.props.parentCallExp2(this.state.Company);
     this.props.parentCallExp3(this.state.Duration);
+    this.props.parentCallExp4(this.state.From);
+    this.props.parentCallExp5(this.state.To);
 
     event.preventDefault();
   };

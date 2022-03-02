@@ -11,6 +11,7 @@ export class PersonalInformation extends React.Component {
       SecondName: "",
       Age: "",
       Country: "",
+      image: "",
     };
   }
 
@@ -27,8 +28,19 @@ export class PersonalInformation extends React.Component {
     this.props.parentCallback2(this.state.SecondName);
     this.props.parentCallback3(this.state.Age);
     this.props.parentCallback4(this.state.Country);
+    this.props.parentCallback5(this.state.image);
 
     event.preventDefault();
+  };
+
+  onImageChange = event => {
+    if(event.target.files && event.target.files[0]){
+      let reader = new FileReader();
+      reader.onload = e => {
+        this.setState({image: e.target.result});
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
   };
 
   render() {
@@ -46,7 +58,13 @@ export class PersonalInformation extends React.Component {
               />
             </li>
           ))}
-
+          <input 
+          type="file" 
+          onChange={this.onImageChange} 
+          className="filetype" 
+          id="group_image" 
+          />
+                    
           <input className="Button" type="submit" value="Submit" />
         </form>
       </div>

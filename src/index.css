@@ -4,24 +4,25 @@
   box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
 body {
-  background-color: rgb(211, 211, 211);
+  background-color: white;
   color: white;
 }
 
 .TopBar {
   text-align: center;
-  background: -webkit-linear-gradient(rgb(32, 31, 31), rgb(92, 91, 91));
-
+  background: #2e3f7a;
   padding: 10px;
-  font-size: 40px;
+  font-family: "Orbitron", sans-serif;
 }
 
 .inputsGetValueSectionDisplay {
   text-align: center;
   display: flex;
   justify-content: space-around;
-  height: 400px;
+  height: 500px;
   padding: 5%;
 }
 
@@ -29,13 +30,17 @@ body {
 .jobExperience,
 .education {
   width: 400px;
-  background: -webkit-linear-gradient(rgb(32, 31, 31), rgb(92, 91, 91));
+  background: #c4c4c4;
 }
 
 .inputsGetValueSectionDisplay h1 {
-  background: -webkit-linear-gradient(rgb(245, 99, 2) ,rgb(135, 58, 7));
+  background: #2e3f7a;
   padding: 5px;
-  font-size: 30px;
+  font-size: 25px;
+  font-family: "Orbitron", sans-serif;
+
+  margin: 10px;
+  font-weight: 100;
 }
 
 .displayInputs {
@@ -48,50 +53,137 @@ li {
 
 input {
   width: 80%;
-  height: 25px;
+  height: 30px;
   margin: 5px;
   text-align: center;
-  font-family: monospace;
-  font-size: 15px;
+  font-size: 20px;
+  font-family: "Orbitron", sans-serif;
+  border: none;
+}
+
+::placeholder {
+  color: black;
 }
 
 .Button {
-  background: -webkit-linear-gradient(rgb(245, 99, 2) ,rgb(135, 58, 7));
+  background: #2e3f7a;
   color: white;
-  font-family: monospace;
-  font-size: 20px;
-  font-weight: bolder;
+  font-family: "Orbitron", sans-serif;
+  font-size: 25px;
   padding: 10px;
   border-radius: 10px;
   height: 60px;
 }
 
+.Button:hover {
+  background: #586bb1;
+}
+
 footer {
   text-align: center;
   margin: 0 5%;
-  height: 300px;
-  background: -webkit-linear-gradient(rgb(32, 31, 31), rgb(92, 91, 91));
+  height: 1100px;
+  background: #c4c4c4;
 }
 
 .displayInputsTopBar {
-  background: -webkit-linear-gradient(rgb(245, 99, 2) ,rgb(135, 58, 7));
+  background: #2e3f7a;
   padding: 5px;
-  font-size: 30px;
+  font-size: 25px;
+  font-family: "Orbitron", sans-serif;
 }
 
 .displayInputsPersonalInformation,
 .displayInputsJobExperience,
-.displayInputsEducation{
+.displayInputsEducation {
+  padding: 20px;
+}
+.displayInputsPersonalInformation {
   display: flex;
-  justify-content: space-around;
+}
+
+.aux {
+  width: 78%;
+}
+
+.displayInputsPersonalInformation h1,
+.displayInputsJobExperience h1,
+.displayInputsEducation h1 {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  background: #2e3f7a;
   padding: 10px;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 20px;
+}
+
+.displayInputsPersonalInformation h1 {
+  width: 50%;
+  margin-left: 20%;
+}
+
+.persInfo section {
+  display: flex;
+  padding: 5px;
 }
 
 .displayInputsPersonalInformation h2,
 .displayInputsJobExperience h2,
-.displayInputsEducation h2{
-  text-decoration: underline;
-  font-family: monospace;
+.displayInputsEducation h2 {
+  background: #2e3f7a;
+  font-family: "Orbitron", sans-serif;
+  padding: 5px;
+  width: 15%;
+}
+
+.displayInputsPersonalInformation h3,
+.displayInputsJobExperience h3,
+.displayInputsEducation h3 {
+  background: white;
+  color: black;
+  font-family: "Orbitron", sans-serif;
+  padding: 5px;
+  text-align: center;
+  width: 90%;
+}
+
+.displayInputsPersonalInformation h3 {
+  width: 75%;
+}
+
+/*!STYLE DEL BOTON PARA LAS IMAGENES*/
+.filetype {
+  color: transparent;
+}
+.filetype::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.filetype::before {
+  content: "Select some files";
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  margin-left: 25%;
+}
+.filetype:hover::before {
+  border-color: black;
+}
+.filetype:active {
+  outline: 0;
+}
+.filetype:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
 @media (max-width: 780px) {
@@ -105,6 +197,7 @@ footer {
   .jobExperience,
   .education {
     width: 100%;
-    background: -webkit-linear-gradient(rgb(32, 31, 31), rgb(92, 91, 91));
+    background: #c4c4c4;
+    margin-top: 20px;
   }
 }

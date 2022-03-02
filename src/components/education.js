@@ -1,6 +1,6 @@
 import React from "react";
 
-let inputElements = ["University", "Degree", "Subject"];
+let inputElements = ["University", "Degree", "Subject", "From", "To"];
 
 export class Education extends React.Component {
   constructor(props) {
@@ -10,6 +10,8 @@ export class Education extends React.Component {
         University: "",
         Degree: "",
         Subject: "",
+        From: "",
+        To: "",
     };
   }
 
@@ -25,6 +27,8 @@ export class Education extends React.Component {
     this.props.patentCallBackEdu(this.state.University);
     this.props.patentCallBackEdu2(this.state.Degree);
     this.props.patentCallBackEdu3(this.state.Subject);
+    this.props.patentCallBackEdu4(this.state.From);
+    this.props.patentCallBackEdu5(this.state.To);
 
     event.preventDefault();
   };
