@@ -9,6 +9,7 @@
 body {
   background-color: white;
   color: white;
+  
 }
 
 .TopBar {
@@ -134,7 +135,7 @@ footer {
   background: #2e3f7a;
   font-family: "Orbitron", sans-serif;
   padding: 5px;
-  width: 15%;
+  width: 30%;
 }
 
 .displayInputsPersonalInformation h3,
@@ -186,11 +187,26 @@ footer {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
+.Print{
+  text-align: center;
+  background: #2e3f7a;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-size: 25px;
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  margin: 0 5%;
+}
+
+.Print:hover {
+  background: #586bb1;
+}
+
 @media (max-width: 780px) {
   .inputsGetValueSectionDisplay {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: inline-block;
   }
 
   .PersonalInformation,
@@ -200,4 +216,16 @@ footer {
     background: #c4c4c4;
     margin-top: 20px;
   }
+
+  .displayInputsPersonalInformation h1,
+.displayInputsJobExperience h1,
+.displayInputsEducation h1 {
+  font-size: auto;
+}
+
+.displayInputsPersonalInformation h2,
+.displayInputsJobExperience h2,
+.displayInputsEducation h2 {
+  font-size: auto;
+}
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { ContentDisplay } from './components/contentDisplay';
+import ReactToPrint from 'react-to-print';
 
 class Main extends React.Component{
   constructor(props){
@@ -11,7 +12,12 @@ class Main extends React.Component{
   render(){
     return(
       <div>
-        <ContentDisplay/>
+         <ContentDisplay ref={el => (this.componentRef = el)} />
+        <ReactToPrint trigger={() => {
+          return <a href="#" className="Print">Print Your CV!</a>
+        }}
+        content={() => this.componentRef}
+        />
       </div>
     )
   }
