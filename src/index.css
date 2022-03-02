@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(211, 211, 211);
+  color: white;
+}
+
+.TopBar {
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(32, 31, 31), rgb(92, 91, 91));
+
+  padding: 10px;
+  font-size: 40px;
+}
+
+.inputsGetValueSectionDisplay {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+  padding: 5%;
+}
+
+.PersonalInformation,
+.jobExperience,
+.education {
+  width: 400px;
+  background: -webkit-linear-gradient(rgb(32, 31, 31), rgb(92, 91, 91));
+}
+
+.inputsGetValueSectionDisplay h1 {
+  background: -webkit-linear-gradient(rgb(245, 99, 2) ,rgb(135, 58, 7));
+  padding: 5px;
+  font-size: 30px;
+}
+
+.displayInputs {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  width: 80%;
+  height: 25px;
+  margin: 5px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.Button {
+  background: -webkit-linear-gradient(rgb(245, 99, 2) ,rgb(135, 58, 7));
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px;
+  border-radius: 10px;
+  height: 60px;
+}
+
+footer {
+  text-align: center;
+  margin: 0 5%;
+  height: 300px;
+  background: -webkit-linear-gradient(rgb(32, 31, 31), rgb(92, 91, 91));
+}
+
+.displayInputsTopBar {
+  background: -webkit-linear-gradient(rgb(245, 99, 2) ,rgb(135, 58, 7));
+  padding: 5px;
+  font-size: 30px;
+}
+
+.displayInputsPersonalInformation,
+.displayInputsJobExperience,
+.displayInputsEducation{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.displayInputsPersonalInformation h2,
+.displayInputsJobExperience h2,
+.displayInputsEducation h2{
+  text-decoration: underline;
+  font-family: monospace;
+}
+
+@media (max-width: 780px) {
+  .inputsGetValueSectionDisplay {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .PersonalInformation,
+  .jobExperience,
+  .education {
+    width: 100%;
+    background: -webkit-linear-gradient(rgb(32, 31, 31), rgb(92, 91, 91));
+  }
+}
